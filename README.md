@@ -1,102 +1,166 @@
-Assignment 1: Dataset Processing
-Objective
+# English–Hindi Dataset Processing and Translation Assessment
 
-Process the English–Hindi parallel dataset and create a cleaned dataset according to the following conditions:
+## Overview
 
-Use at least 10,000 sentence pairs.
-Keep sentences having 5–50 words in both English and Hindi.
-Calculate the word count difference.
-Keep only rows where the difference is between -10 and +10.
-Export the final data to an Excel file.
-Output File
+This repository contains the solutions for:
+
+- Assignment 1: English–Hindi Dataset Processing and Analysis
+- Assignment 2: English-to-Hindi Translation using a Large Language Model (LLM)
+
+All the code was implemented and executed using **Google Colab**.
+
+---
+
+## Repository Structure
+
+```text
+English-Hindi-Assessment/
+│
+├── Assignment1/
+│   ├── Assignment1.ipynb
+│   ├── assignment1_cleaned_dataset.xlsx
+│
+├── Assignment2/
+│   ├── Assignment2.ipynb
+│   ├── assignment2_translation.xlsx
+│   └── evaluation_scores.txt
+│
+└── README.md
+```
+
+---
+
+## Assignment 1: Dataset Processing
+
+### Objective
+
+The objective of Assignment 1 was to process an English–Hindi parallel dataset and create a cleaned dataset according to the following conditions:
+
+- Use at least 10,000 sentence pairs.
+- Calculate word counts for English and Hindi sentences.
+- Keep only sentences with word counts between 5 and 50 in both languages.
+- Calculate the difference between English and Hindi word counts.
+- Keep only sentence pairs where the difference is between -10 and +10.
+- Export the final cleaned dataset to an Excel file.
+
+### Output File
+
+```text
 assignment1_cleaned_dataset.xlsx
-Excel Columns
-English Sentences
-Hindi Sentences
-Word Count (English)
-Word Count (Hindi)
-Difference between Word Count (English) and Word Count (Hindi)
-Assignment 2: Translation with LLM
-Objective
-Select 100 English sentences from Assignment 1.
-Translate them into Hindi using an LLM.
-Calculate BLEU, CHRF, and TER scores.
-Save the translations and evaluation results.
-Translation Model Used
+```
+
+### Columns in the Excel File
+
+1. English Sentences
+2. Hindi Sentences
+3. Word Count (English)
+4. Word Count (Hindi)
+5. Difference between Word Count (English) and Word Count (Hindi)
+
+---
+
+## Assignment 2: Translation with LLM
+
+### Objective
+
+The objective of Assignment 2 was to:
+
+- Select 100 English sentences from the cleaned dataset.
+- Translate them into Hindi using a Large Language Model (LLM).
+- Calculate BLEU, CHRF, and TER evaluation metrics.
+- Save the translated sentences and evaluation scores.
+
+### Translation Model Used
+
+```text
 Helsinki-NLP/opus-mt-en-hi
-Output Files
+```
+
+### Output Files
+
+```text
 assignment2_translation.xlsx
 evaluation_scores.txt
-Translation Excel Columns
-Original English Sentence
-Model-generated Hindi Translation
-Requirements
+```
 
-Install the required Python packages:
+### Columns in the Translation Excel File
 
-pip install pandas openpyxl transformers sentencepiece sacrebleu datasets
+1. Original English Sentence
+2. Model-generated Hindi Translation
 
-Alternatively:
+---
 
-pip install -r requirements.txt
-How to Run Assignment 1
+## Requirements
 
-Navigate to the Assignment1 folder:
+The following Python libraries were installed in Google Colab:
 
-cd Assignment1
+```python
+!pip install pandas openpyxl transformers sentencepiece sacrebleu datasets
+```
 
-Run:
+---
 
-python dataset_processing.py
+## How to Run Assignment 1 (Google Colab)
 
-The script will:
+1. Open `Assignment1.ipynb` in Google Colab.
+2. Upload or clone the dataset repository.
+3. Run all cells sequentially.
+4. The notebook generates:
 
-Read the English and Hindi text files.
-Create a DataFrame.
-Calculate word counts.
-Apply filtering conditions.
-Generate:
+```text
 assignment1_cleaned_dataset.xlsx
-How to Run Assignment 2
+```
 
-Navigate to the Assignment2 folder:
+---
 
-cd Assignment2
+## How to Run Assignment 2 (Google Colab)
 
-Run:
+1. Open `Assignment2.ipynb` in Google Colab.
+2. Upload `assignment1_cleaned_dataset.xlsx`.
+3. Run all cells sequentially.
+4. The notebook:
+   - Selects 100 English sentences.
+   - Translates them into Hindi using the LLM.
+   - Calculates BLEU, CHRF, and TER scores.
+   - Generates:
 
-python translation.py
-
-The script will:
-
-Load the cleaned dataset.
-Select 100 English sentences.
-Translate them into Hindi using the LLM.
-Calculate BLEU, CHRF, and TER scores.
-Generate:
+```text
 assignment2_translation.xlsx
 evaluation_scores.txt
-Evaluation Metrics
+```
 
-The following evaluation metrics are used:
+---
 
-BLEU (Bilingual Evaluation Understudy)
-CHRF (Character n-gram F-score)
-TER (Translation Edit Rate)
+## Evaluation Metrics Used
 
-The results are stored in:
+The following metrics were used to evaluate the translation quality:
 
+- BLEU (Bilingual Evaluation Understudy)
+- CHRF (Character n-gram F-score)
+- TER (Translation Edit Rate)
+
+The scores are stored in:
+
+```text
 evaluation_scores.txt
-Tools and Libraries Used
-Python 3
-Google Colab
-Pandas
-Hugging Face Transformers
-SentencePiece
-SacreBLEU
-OpenPyXL
-Author
+```
+
+---
+
+## Tools and Technologies Used
+
+- Google Colab
+- Python 3
+- Pandas
+- Hugging Face Transformers
+- SentencePiece
+- SacreBLEU
+- OpenPyXL
+
+---
+
+## Author
 
 Name: Mr. Baiju Kumar
 
-Date: 27/06/2026
+Date: 27 June 2026
