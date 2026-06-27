@@ -7,7 +7,7 @@ This repository contains the solutions for:
 - Assignment 1: English–Hindi Dataset Processing and Analysis
 - Assignment 2: English-to-Hindi Translation using a Large Language Model (LLM)
 
-All the code was implemented and executed using **Google Colab**.
+All tasks were implemented and executed using Google Colab.
 
 ---
 
@@ -16,15 +16,10 @@ All the code was implemented and executed using **Google Colab**.
 ```text
 English-Hindi-Assessment/
 │
-├── Assignment1/
-│   ├── Assignment1.ipynb
-│   ├── assignment1_cleaned_dataset.xlsx
-│
-├── Assignment2/
-│   ├── Assignment2.ipynb
-│   ├── assignment2_translation.xlsx
-│   └── evaluation_scores.txt
-│
+├── assignment1_and_2.ipynb
+├── assignment1_cleaned_dataset.xlsx
+├── assignment2_translation.xlsx
+├── evaluation_scores.txt
 └── README.md
 ```
 
