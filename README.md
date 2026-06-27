@@ -33,9 +33,3 @@ Translate into Hindi
 Generate the corresponding Hindi translations using the LLM.
 Calculate BLEU, CHRF, TER Score on the translated sentences and save it in
 .txt file
-
-Submission Format
-
-Prepare your output in Excel format with the following columns:
-Column A: Original English sentence
-Column B: Model-generated Hindi translation
